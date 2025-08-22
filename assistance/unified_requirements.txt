@@ -1,0 +1,20 @@
+# Unified API requirements
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# Agent dependencies
+crewai
+openai
+
+# Gmail dependencies
+google-api-python-client
+google-auth-oauthlib
+playwright
+
+# PDF dependencies
+langchain
+langchain-community
+langchain-qdrant
+qdrant-client
