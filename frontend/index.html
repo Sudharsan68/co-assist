@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLovable Unified Orchestrator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Assistant</h1>
+            <p>Your AI  Assistan for Gmail, PDFs, and Web Search</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages"></div>
+                <div class="input-container">
+                    <textarea id="user-input" placeholder="Ask me anything... "></textarea>
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+
+            <div class="tools-panel">
+                <div class="tool-section">
+                    <h3>📧 Gmail Agent</h3>
+                    <button id="compose-email-btn">Compose Email</button>
+                    <div id="email-form" class="hidden">
+                        <input type="email" id="email-to" placeholder="To: email@example.com">
+                        <input type="text" id="email-subject" placeholder="Subject">
+                        <textarea id="email-task" placeholder="What should the email say?"></textarea>
+                        <select id="email-tone">
+                            <option value="formal">Formal</option>
+                            <option value="casual">Casual</option>
+                            <option value="friendly">Friendly</option>
+                        </select>
+                        <button id="send-email-btn">Send Email</button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>📄 PDF Summarizer</h3>
+                    <div class="upload-zone" id="pdf-upload-zone">
+                        <p>Drag & drop PDFs here or <input type="file" id="pdf-file" accept=".pdf" multiple></p>
+                    </div>
+                    <div id="uploaded-pdfs" class="uploaded-files"></div>
+                    <div id="pdf-question" class="hidden">
+                        <input type="text" id="pdf-query" placeholder="Ask a question about the PDF...">
+                        <button id="ask-pdf-btn">Ask</button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>🌐 Web Search</h3>
+                    <input type="text" id="web-query" placeholder="Search the web...">
+                    <button id="search-web-btn">Search</button>
+                    <div class="search-history">
+                        <h4>Recent Searches</h4>
+                        <div id="search-history" class="history-container"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="orchestrator.js"></script>
+</body>
+</html>
